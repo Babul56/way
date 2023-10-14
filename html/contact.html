@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <!-- TailwindCSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Swiper's CSS -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <!-- FontAwesome-Icon-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+	<!-------Home-Page------->
+	<div class="custom-bg custom-contact-bg">
+		<!-------Navigation------->
+		<header class="main-header-light">
+            <nav class="relative px-6 md:px-10 lg:px-44 py-6 lg:py-10 flex justify-between items-center">
+                <a class="text-3xl font-bold leading-none" href="../index.html">
+                    <img src="../images/logo.png" alt="Logo" class="w-20 h-auto">
+                </a>
+                <div class="lg:hidden">
+                    <button class="navbar-burger flex items-center text-blue-600 p-3">
+                        <svg class="block h-4 w-4 fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <title>Mobile menu</title>
+                            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+                        </svg>
+                    </button>
+                </div>
+                <ul class="hidden absolute top-1/2 left-1/4 md:left-1/3 transform -translate-y-1/2 -translate-x-1/2 lg:flex lg:mx-auto lg:items-center lg:w-auto lg:space-x-6">
+                    <li><a class="text-lg font-medium text-white hover:text-gray-100" href="../index.html">Home</a></li>
+                    <li>
+                        <div class="dropdown relative inline-block">
+                            <button class="bg-transparent border-0 text-lg font-medium text-white hover:text-gray-100">
+                            <div class="flex justify-center items-center">
+                                <span class="mr-1"><a href="#" class="text-lg font-medium text-white hover:text-gray-100">Project</a></span>
+                                <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/> 
+                                </svg>
+                            </div>
+                            </button>
+                            <ul class="dropdown-menu hidden absolute rounded-md shadow-lg bg-white z-10 px-8 py-4">
+                                <li class="my-3">
+                                <a href="project-ongoing.html" class="text-md font-medium text-gray-800 hover:text-lime-700 flex items-center"><i class="fa-solid fa-square mr-2"></i>Ongoing<span class="ml-2">Project</span></a>
+                                </li>
+                                <li class="my-3">
+                                    <a href="project-upcoming.html" class="text-md font-medium text-gray-800 hover:text-lime-700 flex items-center"><i class="fa-solid fa-square mr-2"></i>Upcoming<span class="ml-2">Project</span></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a class="text-lg font-medium text-white hover:text-gray-100" href="blog.html">Blog</a></li>
+                    <li><a class="text-lg font-medium text-white hover:text-gray-100" href="about.html">About Us</a></li>
+                </ul>
+                <a class="hidden lg:inline-block lg:ml-auto lg:mr-3 py-1.5 px-6 bg-none hover:bg-gray-500 text-lg text-white font-medium  rounded-3xl transition duration-200 border border-solid border-white" href="contact.html">Contact Us</a>
+                <button class="hidden lg:inline-block py-1.5 px-6 bg-lime-300 text-lg hover:bg-lime-500 text-gray-900 font-medium rounded-3xl transition duration-200" data-popup-open="popup-1">Sign up</button>
+                <div class="popup z-50" data-popup="popup-1">
+                    <div class="popup-inner">
+                        <div class="flex justify-center items-center mb-8">
+                            <a onclick="toggleVisibility('Menu1')"; class="cursor-pointer pr-8 border-r-2">LOGIN</a>
+                            <a onclick="toggleVisibility('Menu2')"; class="cursor-pointer pl-8">REGISTER</a>
+                        </div>
+                        <div class="bg-gray-100 rounded-lg shadow-2xl" id="Menu1">
+							<form id="login" class="text-md bg-lime-300 p-4" method="POST" action="login">
+								<div class="border rounded mb-4 shadow appearance-none">
+									<input class="w-full py-2 px-3 text-black leading-normal rounded" id="name" name="name" type="text" placeholder="user name or email address">
+								</div>
+								<div class="border rounded mb-4 shadow appearance-none">
+									<input class="w-full py-2 px-3 text-black leading-normal rounded" id="password" name="password" type="password" placeholder="Password">
+								</div>
+								<div class="flex justify-center items-center h-10">
+									<button><a href="../index.html" class="text-white hover:text-black bg-lime-500 hover:bg-white rounded py-2 px-8">Log In</a></button>
+								</div>
+							</form>
+                        </div>
+                        <div class="hidden" id="Menu2">
+							<form id="register" class="text-md bg-lime-300 p-4" method="POST" action="register">
+								<div class="border rounded mb-4 shadow appearance-none">
+									<input class="w-full py-2 px-3 text-black leading-normal rounded" id="name" name="name" type="text" placeholder="Your Name">
+								</div>
+								<div class="border rounded mb-4 shadow appearance-none">
+									<input class="w-full py-2 px-3 text-black leading-normal rounded" id="email" name="name" type="text" placeholder="Your Email Address">
+								</div>
+								<div class="border rounded mb-4 shadow appearance-none">
+									<input class="w-full py-2 px-3 text-black leading-normal rounded" id="password" name="password" type="password" placeholder="Password">
+								</div>
+								<div class="flex justify-center items-center h-10">
+									<button><a href="../index.html" class="text-white hover:text-black bg-lime-500 hover:bg-white rounded py-2 px-8">Register</a></button>
+								</div>
+							</form>
+							<div class="xs:max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg mx-5 my-5">
+								<p class="text-black">
+									Already have an account? <a onclick="toggleVisibility('Menu1')"; class="cursor-pointer font-bold hover:underline">Login here</a>.
+								</p>
+							</div>
+                        </div>
+                        <a class="popup-close" data-popup-close="popup-1" href="#">x</a>
+                    </div>
+                </div>
+            </nav>
+            <div class="navbar-menu relative z-50 hidden">
+                <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
+                <nav class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto">
+                    <div class="flex items-center mb-8">
+                        <a class="mr-auto text-3xl font-bold leading-none" href="../index.html">
+                            <img src="../images/logo.png" alt="Logo" class="w-20 h-auto">
+                        </a>
+                        <button class="navbar-close">
+                            <svg class="h-6 w-6 text-gray-400 cursor-pointer hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    <div>
+                        <ul>
+                            <li class="mb-1">
+                                <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-lime-100 hover:text-blue-600 rounded" href="../index.html">Home</a>
+                            </li>
+                            <li class="mb-1">
+                                <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-lime-100 hover:text-blue-600 rounded" href="#">Project</a>
+                            </li>
+                            <div class="ml-10">
+                                <li class="my-3">
+                                <a href="project-ongoing.html" class="text-md font-medium text-gray-800 hover:text-lime-700 flex items-center"><i class="fa-solid fa-square mr-2"></i>Ongoing<span class="ml-2">Project</span></a>
+                                </li>
+                                <li class="my-3">
+                                    <a href="project-upcoming.html" class="text-md font-medium text-gray-800 hover:text-lime-700 flex items-center"><i class="fa-solid fa-square mr-2"></i>Upcoming<span class="ml-2">Project</span></a>
+                                </li>
+                            </div>
+                            <li class="mb-1">
+                                <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-lime-100 hover:text-blue-600 rounded" href="blog.html">Blog</a>
+                            </li>
+                            <li class="mb-1">
+                                <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-lime-100 hover:text-blue-600 rounded" href="about.html">About Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="mt-auto">
+                        <div class="pt-6">
+                            <a class="block px-4 py-3 mb-3 leading-loose text-xs text-center font-semibold leading-none bg-gray-50 hover:bg-gray-100 rounded-xl" href="contact.html">Contact Us</a>
+                            <button class="w-full px-4 py-3 bg-lime-300 leading-loose text-md hover:bg-lime-500 text-gray-900 font-medium rounded-xl transition duration-200" data-popup-open="popup-1">Sign up</button>
+							<div class="popup z-50" data-popup="popup-1">
+								<div class="popup-inner">
+									<div class="flex justify-center items-center mb-8">
+										<a onclick="toggleVisibility('Menu1')"; class="cursor-pointer pr-8 border-r-2">LOGIN</a>
+										<a onclick="toggleVisibility('Menu2')"; class="cursor-pointer pl-8">REGISTER</a>
+									</div>
+									<div class="bg-gray-100 rounded-lg shadow-2xl" id="Menu1">
+										<form id="login" class="text-md bg-lime-300 p-4" method="POST" action="login">
+											<div class="border rounded mb-4 shadow appearance-none">
+												<input class="w-full py-2 px-3 text-black leading-normal rounded" id="name" name="name" type="text" placeholder="user name or email address">
+											</div>
+											<div class="border rounded mb-4 shadow appearance-none">
+												<input class="w-full py-2 px-3 text-black leading-normal rounded" id="password" name="password" type="password" placeholder="Password">
+											</div>
+											<div class="flex justify-center items-center h-10">
+												<button><a href="../index.html" class="text-white hover:text-black bg-lime-500 hover:bg-white rounded py-2 px-8">Log In</a></button>
+											</div>
+										</form>
+									</div>
+									<div class="hidden" id="Menu2">
+										<form id="register" class="text-md bg-lime-300 p-4" method="POST" action="register">
+											<div class="border rounded mb-4 shadow appearance-none">
+												<input class="w-full py-2 px-3 text-black leading-normal rounded" id="name" name="name" type="text" placeholder="Your Name">
+											</div>
+											<div class="border rounded mb-4 shadow appearance-none">
+												<input class="w-full py-2 px-3 text-black leading-normal rounded" id="email" name="name" type="text" placeholder="Your Email Address">
+											</div>
+											<div class="border rounded mb-4 shadow appearance-none">
+												<input class="w-full py-2 px-3 text-black leading-normal rounded" id="password" name="password" type="password" placeholder="Password">
+											</div>
+											<div class="flex justify-center items-center h-10">
+												<button><a href="../index.html" class="text-white hover:text-black bg-lime-500 hover:bg-white rounded py-2 px-8">Register</a></button>
+											</div>
+										</form>
+										<div class="xs:max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg mx-5 my-5">
+											<p class="text-black">
+												Already have an account? <a onclick="toggleVisibility('Menu1')"; class="cursor-pointer font-bold hover:underline">Login here</a>.
+											</p>
+										</div>
+									</div>
+									<a class="popup-close" data-popup-close="popup-1" href="#">x</a>
+								</div>
+							</div>
+                        </div>
+                        <p class="my-4 text-xs text-center text-gray-400">
+                            <span>Copyright © 2021</span>
+                        </p>
+                    </div>
+                </nav>
+            </div>
+		</header>
+		<div class="h-48 md:h-56 lg:h-72 flex flex-col justify-center items-center">
+			<h2 class="text-3xl font-bold text-white mb-4 uppercase tracking-wide">Contact Us</h2>
+			<div class="flex items-center pb-12">
+				<a href="../index.html" class="text-xl font-medium text-lime-100 hover:text-lime-300">Home</a>
+				<i class="fa-solid fa-chevron-right custom-chevron mx-2"></i>
+				<a href="" class="text-xl font-medium text-lime-300">Contact Us</a>
+			</div>
+		</div>
+	</div>
+	<!-------ContactUs-Section------->
+	<section class="px-6 md:px-10 lg:px-44 py-10 md:py-12 lg:py-16 bg-green-50">
+		<div class="grid lg:grid-cols-2 items-center gap-5 custom-contact-box rounded-xl p-0 lg:p-16">
+			<div class="order-2 lg:order-1 mt-2 lg:mt-0 xl:mt-0 px-0 lg:px-10 lg:pl-0 pb-4">
+				<h2 class="text-2xl font-bold text-center mb-2 lg:mb-6 lg:text-left text-white">Get a quote</h2>
+				<p class="text-md text-center lg:text-left text-white">Feel free to get in touch with us for any inquiries, feedback, or assistance. We're dedicated to providing excellent service and are eager to hear from you. Whether you have questions about our products, want to discuss a project, or just want to say hello, we're here for you.</p>
+				<div class="flex items-center justify-center lg:justify-start mt-6 lg:mt-8 mb-4">
+					<i class="fa-solid fa-phone-volume custom-phone px-4 pl-0 lg:pl-4"></i>
+					<p class="text-lg text-white font-medium">+8801407100300</p>
+				</div>
+				<div class="flex items-center justify-center lg:justify-start mb-4">
+					<p class="text-lg text-white font-medium p-2 inline-block border rounded-lg border-lime-500 px-4 py-2"><span class="mr-4"><i class="fa-solid fa-envelope custom-message"></i></span>
+						info@wayhousing.com</p>
+				</div>
+				<div class="flex justify-center lg:justify-start mt-2 lg:mt-12">
+					<a href="https://www.facebook.com/people/Way-Housing-Private-Limited/100089647546072/"><i class="fa-brands fa-facebook-f w-10 h-10 rounded-full border border-lime-500 hover:bg-lime-300 flex justify-center items-center mr-4 custom-contact-icon"></i></a>
+					<i class="fa-brands fa-twitter w-10 h-10 rounded-full border border-lime-500 hover:bg-lime-300 flex justify-center items-center mr-4 custom-contact-icon"></i>
+                    <a href="https://www.youtube.com/channel/UCdPkmOsoX42ppUfTdzHcPVQ"><i class="fa-brands fa-youtube w-10 h-10 rounded-full border border-lime-500 hover:bg-lime-300 flex justify-center items-center mr-4 custom-contact-icon"></i></a>
+                    
+				</div>
+			</div>
+			<div class="order-1 lg:order-1 bg-none lg:bg-white rounded-2xl px-4 lg:px-10 py-4 lg:py-10">
+				<div class="mx-auto max-w-screen-md">
+					<form action="#" class="space-y-6">
+						<div class="flex">
+							<input type="email" id="name" class="bg-gray-100 text-sm text-gray-900 rounded-md w-full p-2.5 border border-gray-300" placeholder="Your Name" required>
+						</div>
+						<div class="flex">
+							<input type="email" id="email" class="bg-gray-100 text-sm text-gray-900 rounded-md w-full p-2.5 border border-gray-300" placeholder="Your mail" required>
+						</div>
+						<div class="flex">
+							<input type="email" id="phone" class="bg-gray-100 text-sm text-gray-900 rounded-md w-full p-2.5 border border-gray-300" placeholder="First Name" required>
+						</div>
+						<div class="sm:col-span-2">
+							<textarea id="message" rows="6" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-100 rounded-lg shadow-sm border border-gray-300" placeholder="Type Your Messages..."></textarea>
+						</div>
+						<div>
+							<button class="w-full text-md md:text-xl bg-lime-300 rounded-3xl font-medium text-gray-900 py-2 px-5 mt-6 hover:bg-lime-500">Send Messages</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-------ContactUs-Section------->
+	<section class="px-6 md:px-10 lg:px-44 py-10 md:py-12 lg:py-16">
+		<div class="flex flex-col py-12 md:py-16 lg:py-32 custom-contact-map-bg">
+			<div class="px-4 md:px-12 lg:px-44">
+				<h2 class="text-2xl font-bold text-center mb-3">Visit Our Website</h2>
+				<p class="text-lg font-normal text-center">Welcome to our online home, where you can explore everything our website has to offer. Whether you're a first-time visitor or a returning customer, we invite you to navigate through our digital space to discover a world of information, products, and services that await you.</p>
+				<a href="https://maps.app.goo.gl/jhNuEPq4RMrnrHmq6" target="_blank"><button class="flex m-auto md:text-xl bg-lime-300 rounded-2xl font-medium text-gray-900 py-2 px-8 mt-6 hover:bg-lime-500">View Map</button></a>
+			</div>
+		</div>
+	</section>
+	<!-------Footer-Section------->
+	<!-- Footer container -->
+	<section class="footer-section footer-main px-6 md:px-10 lg:px-44 py-10 md:py-12 lg:py-16 bg-gray-800">
+		<footer class="text-white">
+			<div class="container mx-auto grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4 py-10 pt-0 border-b-2 border-green-200">
+				<div class="text-sm pr-8 col-1">
+					<a class="text-3xl font-bold leading-none" href="index.html">
+						<img src="../images/logo.png" alt="Logo" class="w-20 h-auto">
+					</a>
+					<ul>
+						<p class="justify-around py-6">Way Housing Pvt. Ltd. is improving and contributing to the culture of real estate companies in Bangladesh. Therefore, from the beginning, we have set our own standards in line with the world-class best practices in the real estate industry. Way Housing Pvt. Ltd. focusing on apartment sales in your own town.</p>
+						<div class="flex custom-footer-icon">
+							<a href="https://www.facebook.com/people/Way-Housing-Private-Limited/100089647546072/"><i class="fa-brands fa-facebook-f w-8 h-8 rounded-full border border-gray-500 hover:bg-lime-300 flex justify-center items-center mr-4"></i></a>
+							<a href=""><i class="fa-brands fa-twitter w-8 h-8 rounded-full border border-gray-500 hover:bg-lime-300 flex justify-center items-center mr-4"></i></a>
+							<a href="https://www.youtube.com/channel/UCdPkmOsoX42ppUfTdzHcPVQ"><i class="fa-brands fa-youtube w-8 h-8 rounded-full border border-gray-500 hover:bg-lime-300 flex justify-center items-center mr-4"></i></a>
+						</div>
+					</ul>
+				</div>
+				<div class="text-sm">
+					<h4 class="text-lg font-semibold mb-2">Useful Links</h4>
+					<ul>
+						<li class="py-2"><a href="index.html" class="hover:text-gray-400">Home</a></li>
+						<li class="py-2"><a href="html/project.html" class="hover:text-gray-400">Project</a></li>
+						<li class="py-2"><a href="html/blog.html" class="hover:text-gray-400">Blog</a></li>
+						<li class="py-2"><a href="html/about.html" class="hover:text-gray-400">About Us</a></li>
+					</ul>
+				</div>
+				<div class="text-sm">
+					<h4 class="text-lg font-semibold mb-2">Support</h4>
+					<ul>
+						<li class="py-2"><a href="#" class="hover:text-gray-400">Help</a></li>
+						<li class="py-2"><a href="html/contact.html" class="hover:text-gray-400">Contact Us</a></li>
+						<li class="py-2"><a href="#" class="hover:text-gray-400">Career</a></li>
+						<li class="py-2"><a href="#" class="hover:text-gray-400">Terms and Condition</a></li>
+					</ul>
+				</div>
+				<div class="text-sm">
+					<h4 class="text-lg font-semibold mb-2">Contact Info</h4>
+					<ul>
+						<li class="py-2 flex items-center">
+							<i class="fa-solid fa-phone mr-2"></i>
+							<p>+8801407100300</p>
+						</li>
+						<li class="py-2 flex items-center">
+							<i class="fa-solid fa-at mr-2"></i>
+							<p>info@wayhousing.com</p>
+						</li>
+						<li class="py-2 flex items-center">
+							<i class="fa-solid fa-location-dot mr-2"></i>
+							<p class="italic">Corporate Office- Khan ABC Tradeplex, Road# 02, Level-02, Dhanmondi, Dhaka-1209.</p>
+						</li>
+						<li class="py-2 flex items-center">
+							<i class="fa-solid fa-location-dot mr-2"></i>
+							<p class="italic">Head Office-849, East Shewrapara, Prime Bank, 6th Floor, Begum Rokeya Ave, Dhaka, Bangladesh<p>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="flex justify-center">
+				<p class="p-6 pb-0"><i class="fa-regular fa-copyright mr-2"></i>2023 Wayhousing, All Right Reserved</p>
+			</div>
+		</footer>
+	</section>
+	
+	<script src="../JavaScript/popUp.js"></script>
+    <script type="text/javascript" src="../JavaScript/main.js"></script>
+</body>
+</html>
