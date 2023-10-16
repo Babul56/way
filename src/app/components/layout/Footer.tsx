@@ -11,58 +11,69 @@ import {
   FaYoutube,
 } from "react-icons/fa";
 
+/**
+ * Footer component for the website.
+ */
 export default function Footer() {
   const d = new Date();
-
   const date = d.getFullYear();
 
   return (
-    <div className="bg-gray-800 px-3 md:px-8 lg:px-32 py-12 flex flex-col gap-10">
+    <div className="mt-10 flex flex-col gap-10 bg-gray-800 px-3 py-12 md:mt-20 md:px-8 lg:px-32">
       <div className="grid grid-cols-12 gap-3 gap-y-10">
-        <div className="col-span-12 md:col-span-4 flex flex-col gap-6">
+        {/* About Us Section */}
+        <div className="col-span-12 flex flex-col gap-6 md:col-span-4">
           <div className="flex items-center justify-center md:justify-start">
-            <Image src={Logo} alt="logo" className="w-20 h-auto" />
+            <Image src={Logo} alt="logo" className="h-auto w-20" />
           </div>
-          <div className="text-sm text-slate-300 md:pr-8 text-justify">
+          <div className="text-justify text-sm text-slate-300 md:pr-8">
+            {/* Company description */}
             Way Housing Pvt. Ltd. is improving and contributing to the culture
             of real estate companies in Bangladesh. Therefore, from the
             beginning, we have set our own standards in line with the
-            world-className best practices in the real estate industry. Way
-            Housing Pvt. Ltd. focusing on apartment sales in your own town.
+            world-class best practices in the real estate industry. Way Housing
+            Pvt. Ltd. focusing on apartment sales in your own town.
           </div>
           <div className="flex gap-4 text-slate-200">
-            <div className="flex items-center justify-center h-9 w-9 rounded-full border hover:bg-lime-700">
+            {/* Social media links */}
+            <div className="flex h-9 w-9 items-center justify-center rounded-full border hover:bg-lime-700">
               <FaFacebookF />
             </div>
-            <div className="flex items-center justify-center h-9 w-9 rounded-full border hover:bg-lime-700">
+            <div className="flex h-9 w-9 items-center justify-center rounded-full border hover:bg-lime-700">
               <FaTwitter />
             </div>
-            <div className="flex items-center justify-center h-9 w-9 rounded-full border hover:bg-lime-700">
+            <div className="flex h-9 w-9 items-center justify-center rounded-full border hover:bg-lime-700">
               <FaYoutube />
             </div>
           </div>
         </div>
-        <div className="col-span-6 md:col-span-2 flex flex-col gap-10">
-          <div className="text-slate-100 font-bold text-xl">Useful Links</div>
-          <div className="flex flex-col gap-4 text-slate-300  hover:[&>*]:text-lime-500">
+        {/* Useful Links Section */}
+        <div className="col-span-6 flex flex-col gap-10 md:col-span-2">
+          <div className="text-xl font-bold text-slate-100">Useful Links</div>
+          <div className="flex flex-col gap-4 text-slate-300 hover:[&>*]:text-lime-500">
+            {/* Links to various sections */}
             <Link href="/">Home</Link>
             <Link href="/project">Project</Link>
             <Link href="/blog">Blog</Link>
             <Link href="/about_us">About Us</Link>
           </div>
         </div>
-        <div className="col-span-6 md:col-span-2 flex flex-col gap-10">
-          <div className="text-slate-100 font-bold text-xl">Support</div>
-          <div className="flex flex-col gap-4 text-slate-300  hover:[&>*]:text-lime-500">
+        {/* Support Section */}
+        <div className="col-span-6 flex flex-col gap-10 md:col-span-2">
+          <div className="text-xl font-bold text-slate-100">Support</div>
+          <div className="flex flex-col gap-4 text-slate-300 hover:[&>*]:text-lime-500">
+            {/* Support-related links */}
             <Link href="/">Help</Link>
             <Link href="/project">Contact Us</Link>
             <Link href="/blog">Career</Link>
             <Link href="/about_us">Terms and Condition</Link>
           </div>
         </div>
-        <div className="col-span-12 md:col-span-4 flex flex-col gap-10">
-          <div className="text-slate-100 font-bold text-xl">Contact Info</div>
+        {/* Contact Info Section */}
+        <div className="col-span-12 flex flex-col gap-10 md:col-span-4">
+          <div className="text-xl font-bold text-slate-100">Contact Info</div>
           <div className="flex flex-col gap-4 text-slate-300">
+            {/* Contact details */}
             <div className="flex items-center gap-3">
               <FaPhone />
               <div>+8801407100300</div>
@@ -88,8 +99,9 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <div className="bg-lime-200 w-full h-0.5"></div>
-      <div className="flex gap-2 items-center justify-center text-slate-50 text-lg">
+      <div className="h-0.5 w-full bg-lime-200"></div>
+      <div className="flex items-center justify-center gap-2 text-lg text-slate-50">
+        {/* Copyright notice */}
         <AiOutlineCopyrightCircle /> {date} Wayhousing, All Right Reserved
       </div>
     </div>

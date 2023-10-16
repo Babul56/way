@@ -6,48 +6,64 @@ import { FaAngleDown } from "react-icons/fa";
 import Menu from "./NavMenu";
 import SignUp from "./SignUp";
 
+/**
+ * Navbar component for the website.
+ * Displays the website logo, navigation links, and user-related actions.
+ */
 export default function Navbar() {
   return (
-    <header className="px-4 flex md:px-8 lg:px-44 py-4 md:py-6 lg:py-10 justify-between items-center">
+    // Header section with flexible layout
+    <header className="absolute z-50 flex w-full items-center justify-between px-4 py-4 md:px-8 md:py-6 lg:px-44 lg:py-10">
       <div className="flex items-center md:gap-20">
+        {/* Logo with a link to the homepage */}
         <Link href="/">
-          <Image src={Logo} alt="logo" className="w-16 md:w-20 h-auto" />
+          <Image src={Logo} alt="logo" className="h-auto w-16 md:w-20" />
         </Link>
-        <nav className="hidden lg:flex gap-8">
+        <nav className="hidden gap-8 lg:flex">
+          {/* Home link */}
           <Link href="/" className="hover:text-lime-700">
             Home
           </Link>
           <div className="group">
-            <span className="flex items-center gap-1 cursor-pointer hover:text-lime-700">
+            {/* Project dropdown */}
+            <span className="flex cursor-pointer items-center gap-1 hover:text-lime-700">
               Project <FaAngleDown />
             </span>
-            <div className="hidden group-hover:flex flex-col gap-2 p-4 absolute mt-0  bg-white border rounded-lg shadow-lg hover:[&>*]:text-lime-700">
-              <Link href="/" className="flex gap-2 items-center">
+            {/* Dropdown content */}
+            <div className="absolute mt-0 hidden flex-col gap-2 rounded-lg border  bg-white p-4 shadow-lg group-hover:flex hover:[&>*]:text-lime-700">
+              {/* Ongoing Project link */}
+              <Link href="/" className="flex items-center gap-2">
                 <CgDistributeVertical />
                 Ongoing Project
               </Link>
-              <Link href="/" className="flex gap-2 items-center">
+              {/* Upcoming Project link */}
+              <Link href="/" className="flex items-center gap-2">
                 <CgDistributeVertical />
                 Upcoming Project
               </Link>
             </div>
           </div>
+          {/* Blog link */}
           <Link href="/home" className="hover:text-lime-700">
             Blog
           </Link>
+          {/* About Us link */}
           <Link href="/home" className="hover:text-lime-700">
             About Us
           </Link>
         </nav>
       </div>
       <div className="flex gap-10">
-        <div className="hidden md:flex items-center gap-4">
-          <button className="px-6 py-2 rounded-full ring-1 ring-black hover:bg-white transition-all duration-300">
+        <div className="hidden items-center gap-4 md:flex">
+          {/* Contact Us button */}
+          <button className="rounded-full px-6 py-2 ring-1 ring-black transition-all duration-300 hover:bg-white">
             Contact Us
           </button>
+          {/* Sign Up component */}
           <SignUp />
         </div>
         <div className="lg:hidden">
+          {/* Mobile menu */}
           <Menu />
         </div>
       </div>
