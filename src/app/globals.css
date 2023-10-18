@@ -9,12 +9,6 @@
   background-clip: text;
 }
 
-.gradient-bg {
-  background: linear-gradient(
-    180deg,
-    hsla(0, 0%, 0%, 0) 0%,
-    hsla(0, 0%, 0%, 0.3) 10%,
-    hsl(0, 0%, 0%) 100%
-  );
+.scroller[data-animated="true"] .scroller__inner {
+  width: max-content;
 }
-

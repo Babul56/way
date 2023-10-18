@@ -18,7 +18,7 @@ export default function Hero() {
             welcome to way housing
             <FaHandsClapping color="#f4a025" />
           </span>
-          <h2 className="hero-text mt-6  text-4xl font-bold leading-tight tracking-wide lg:text-5xl lg:leading-snug">
+          <h2 className="hero-text mt-6 text-4xl font-bold leading-tight tracking-wide lg:text-5xl lg:leading-snug">
             {/* Hero title */}
             Your Dream Home
             <br /> Just a Click Away

@@ -21,7 +21,7 @@ export default function Featured() {
             alt=""
             className="h-full w-full rounded-3xl object-cover transition-all duration-300 hover:scale-110"
           />
-          <div className="gradient-bg absolute bottom-0 left-0 flex w-full flex-col items-center justify-center gap-2 rounded-b-3xl p-2">
+          <div className=" bg-gradiantbg absolute bottom-0 left-0 flex w-full flex-col items-center justify-center gap-2 rounded-b-3xl p-2">
             <p className="text-lg font-medium text-white">
               Featured | Ongoing Project
             </p>
@@ -39,7 +39,7 @@ export default function Featured() {
             alt=""
             className="h-full w-full rounded-3xl object-cover transition-all duration-300 hover:scale-110"
           />
-          <div className="gradient-bg absolute bottom-0 left-0 flex w-full flex-col items-center justify-center gap-2 rounded-b-3xl p-2">
+          <div className=" bg-gradiantbg absolute bottom-0 left-0 flex w-full flex-col items-center justify-center gap-2 rounded-b-3xl p-2">
             <p className="text-xl font-bold text-white">
               popular City Plaza, Ramgonj
             </p>
@@ -54,7 +54,7 @@ export default function Featured() {
             alt=""
             className="h-full w-full rounded-3xl object-cover transition-all duration-300 hover:scale-110"
           />
-          <div className="gradient-bg absolute bottom-0 left-0 flex w-full flex-col items-center justify-center gap-2 rounded-b-3xl p-2">
+          <div className=" bg-gradiantbg absolute bottom-0 left-0 flex w-full flex-col items-center justify-center gap-2 rounded-b-3xl p-2">
             <p className="text-xl font-bold text-white">
               Dream Way Tower 02, Lakshmipurj
             </p>
