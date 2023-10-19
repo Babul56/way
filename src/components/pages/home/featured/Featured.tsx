@@ -6,7 +6,7 @@ import Image from "next/image";
 export default function Featured() {
   return (
     <div className="flex flex-col gap-8 px-3 py-20 md:px-10 md:py-12 lg:px-44 lg:py-16">
-      <div className="flex flex-col md:justify-between">
+      <div className="flex flex-col md:flex-row md:justify-between">
         <div className="mb-4 text-2xl font-bold lg:mb-0 lg:text-3xl">
           Our Featured Property
         </div>

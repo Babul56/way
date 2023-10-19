@@ -52,9 +52,12 @@ export default function Navbar() {
       <div className="flex gap-10">
         <div className="hidden items-center gap-4 md:flex">
           {/* Contact Us button */}
-          <button className="rounded-full px-6 py-2 ring-1 ring-black transition-all duration-300 hover:bg-white">
+          <Link
+            href="/contact-us"
+            className="rounded-full px-6 py-2 ring-1 ring-black transition-all duration-300 hover:bg-white"
+          >
             Contact Us
-          </button>
+          </Link>
           {/* Sign Up component */}
           <SignUp />
         </div>
