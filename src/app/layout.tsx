@@ -1,3 +1,4 @@
+import Map from "@/components/layout/Map";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Footer from "../components/layout/Footer";
@@ -21,6 +22,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <Navbar />
         {children}
+        <Map />
         <Footer />
       </body>
     </html>

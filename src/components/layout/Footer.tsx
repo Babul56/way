@@ -19,7 +19,7 @@ export default function Footer() {
   const date = d.getFullYear();
 
   return (
-    <div className="mt-10 flex flex-col gap-10 bg-gray-800 px-3 py-12 md:mt-20 md:px-8 lg:px-32">
+    <div className="flex flex-col gap-10 bg-gray-800 px-3 py-12  md:px-8 lg:px-32">
       <div className="grid grid-cols-12 gap-3 gap-y-10">
         {/* About Us Section */}
         <div className="col-span-12 flex flex-col gap-6 md:col-span-4">

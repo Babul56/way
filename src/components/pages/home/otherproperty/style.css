@@ -3,5 +3,8 @@
   @apply font-extrabold text-[#bef264];
 }
 .swiper-pagination-bullet {
-  @apply mt-10 md:mt-16 h-5 w-5 md:h-8 md:w-8 bg-[#bef264];
+  @apply mt-10 h-5 w-5 bg-[#537913] md:mt-16 md:h-8 md:w-8;
+}
+.swiper-pagination-bullet-active {
+  @apply mt-10 h-5 w-5 bg-[#bef264] md:mt-16 md:h-8 md:w-8;
 }

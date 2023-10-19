@@ -38,9 +38,9 @@ const InfiniteScrollAnimation: React.FC = () => {
 
   return (
     <div className="mt-20">
-      <h1 className="mx-24 my-10 text-4xl font-bold">Our Partner</h1>
+      <h1 className="mx-3 my-10 text-4xl font-bold md:mx-24">Our Partner</h1>
       <div className="scroller overflow-hidden">
-        <div className="scroller__inner animate-scroll flex gap-4">
+        <div className="scroller__inner flex animate-scroll gap-4">
           <Image src={Client1} alt="" className="h-24 w-auto" />
           <Image src={Client2} alt="" className="h-24 w-auto" />
           <Image src={Client3} alt="" className="h-24 w-auto" />
