@@ -44,7 +44,7 @@ export default function Navbar() {
             Blog
           </Link>
           {/* About Us link */}
-          <Link href="/home" className="hover:text-lime-700">
+          <Link href="/about-us" className="hover:text-lime-700">
             About Us
           </Link>
         </nav>

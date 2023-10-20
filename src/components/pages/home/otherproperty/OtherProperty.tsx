@@ -15,7 +15,7 @@ import "./style.css";
 export default function OtherProperty() {
   return (
     <>
-      <div className=" mx-4 mb-10 mt-10 text-3xl font-bold md:mx-16 md:text-4xl">
+      <div className=" mx-4 mb-10 mt-10 text-3xl font-bold md:mx-16  md:text-4xl">
         Our Other&#39;s Property
       </div>
       <Swiper

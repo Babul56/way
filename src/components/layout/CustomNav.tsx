@@ -63,7 +63,10 @@ export default function CustomNav() {
               Blog
             </Link>
             {/* About Us link */}
-            <Link href="/home" className="text-slate-50 hover:text-lime-300">
+            <Link
+              href="/about-us"
+              className="text-slate-50 hover:text-lime-300"
+            >
               About Us
             </Link>
           </nav>
