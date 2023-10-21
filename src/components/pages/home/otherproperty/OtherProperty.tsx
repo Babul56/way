@@ -54,7 +54,7 @@ export default function OtherProperty() {
                     src={data.image}
                   />
 
-                  <div className="reveal reveal-left-top">
+                  <div>
                     <header className="m-4 border-b-2 border-dashed border-green-200 p-4 pl-0">
                       <h1>
                         <a

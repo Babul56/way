@@ -28,12 +28,15 @@ export default function Navbar() {
             {/* Dropdown content */}
             <div className="absolute mt-0 hidden flex-col gap-2 rounded-lg border  bg-white p-4 shadow-lg group-hover:flex hover:[&>*]:text-lime-700">
               {/* Ongoing Project link */}
-              <Link href="/" className="flex items-center gap-2">
+              <Link href="/ongoing-project" className="flex items-center gap-2">
                 <CgDistributeVertical />
                 Ongoing Project
               </Link>
               {/* Upcoming Project link */}
-              <Link href="/" className="flex items-center gap-2">
+              <Link
+                href="/upcoming-project"
+                className="flex items-center gap-2"
+              >
                 <CgDistributeVertical />
                 Upcoming Project
               </Link>

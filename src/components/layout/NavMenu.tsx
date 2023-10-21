@@ -69,20 +69,26 @@ export default function Menu() {
             <div className=" space-y-6">
               <div className="font-bold">Project</div>
               <div className="flex flex-col gap-4">
-                <Link href="/" className="flex items-center gap-2">
+                <Link
+                  href="/ongoing-project"
+                  className="flex items-center gap-2"
+                >
                   <CgDistributeVertical />
                   Ongoing Project
                 </Link>
-                <Link href="/" className="flex items-center gap-2">
+                <Link
+                  href="/upcoming-project"
+                  className="flex items-center gap-2"
+                >
                   <CgDistributeVertical />
                   Upcoming Project
                 </Link>
               </div>
             </div>
-            <Link href="/" className="font-bold">
+            <Link href="/about-us" className="font-bold">
               About Us
             </Link>
-            <Link href="/" className="font-bold">
+            <Link href="/blog" className="font-bold">
               Blog
             </Link>
           </div>
@@ -90,9 +96,12 @@ export default function Menu() {
 
           <div className="flex flex-col gap-4  p-4">
             {/* Contact Us button */}
-            <button className="rounded-full px-6 py-2 ring-1 ring-black transition-all duration-300 hover:bg-white">
+            <Link
+              href="/contact-us"
+              className="rounded-full px-6 py-2 ring-1 ring-black transition-all duration-300 hover:bg-white"
+            >
               Contact Us
-            </button>
+            </Link>
             {/* Sign Up component */}
             <SignUp />
           </div>

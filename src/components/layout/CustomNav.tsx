@@ -47,19 +47,25 @@ export default function CustomNav() {
               {/* Dropdown content */}
               <div className="absolute mt-0 hidden flex-col gap-2 rounded-lg border bg-white p-4 shadow-lg group-hover:flex hover:[&>*]:text-lime-700">
                 {/* Ongoing Project link */}
-                <Link href="/" className="flex items-center gap-2">
+                <Link
+                  href="/ongoing-project"
+                  className="flex items-center gap-2"
+                >
                   <CgDistributeVertical />
                   Ongoing Project
                 </Link>
                 {/* Upcoming Project link */}
-                <Link href="/" className="flex items-center gap-2">
+                <Link
+                  href="/upcoming-project"
+                  className="flex items-center gap-2"
+                >
                   <CgDistributeVertical />
                   Upcoming Project
                 </Link>
               </div>
             </div>
             {/* Blog link */}
-            <Link href="/home" className="text-slate-50 hover:text-lime-300">
+            <Link href="/blog" className="text-slate-50 hover:text-lime-300">
               Blog
             </Link>
             {/* About Us link */}
@@ -74,9 +80,12 @@ export default function CustomNav() {
         <div className="flex gap-10">
           <div className="hidden items-center gap-4 md:flex">
             {/* Contact Us button */}
-            <button className="rounded-full px-6 py-2 text-white ring-1 ring-white transition-all duration-300 hover:bg-slate-800 hover:ring-black">
+            <Link
+              href="/contact-us"
+              className="rounded-full px-6 py-2 text-white ring-1 ring-white transition-all duration-300 hover:bg-slate-800 hover:ring-black"
+            >
               Contact Us
-            </button>
+            </Link>
             {/* Sign Up component */}
             <SignUp />
           </div>
@@ -87,10 +96,10 @@ export default function CustomNav() {
         </div>
       </header>
       <div className="absolute inset-0 mt-20 flex flex-col items-center justify-center gap-6">
-        <div className="text-4xl font-bold uppercase text-white">
+        <div className="text-center text-3xl font-bold uppercase tracking-wider text-white md:text-4xl">
           {lastPart}
         </div>
-        <div className=" flex items-center justify-center gap-3 text-xl text-lime-200 hover:[&>*]:text-lime-500">
+        <div className=" flex flex-wrap items-center justify-center gap-3 text-xl text-lime-200 hover:[&>*]:text-lime-500">
           <Link href="/">HOME</Link> <BsArrowRight />
           {pathname
             .split("/")
