@@ -29,13 +29,6 @@ Or if you prefer Yarn:
 yarn
 ```
 
-## Configuration
-
-Create a .env.local file in the root of your project for environment variables. You can use .env.local.example as a template.
-
-```bash
-NEXT_PUBLIC_API_URL=http://your-api-url
-```
 
 ## Running the Development Server
 
@@ -91,4 +84,4 @@ This project is licensed under the MIT License.
 
 ## Conclusion
 
-This example README covers the basic steps to set up, configure, run, and build your Next.js project. Make sure to adapt it to your project's specific requirements and include any additional setup steps or dependencies if needed.
+This example README covers the basic steps to set up, configure, run, and build your Next.js project.
