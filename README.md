@@ -11,10 +11,11 @@ Before you can run this project, ensure you have the following software installe
 
 1. Clone this repository to your local machine:
 
-   ```bash
-   git clone https://github.com/yourusername/your-repo.git
-   cd your-repo
-   ```
+```bash
+git clone https://github.com/yourusername/your-repo.git
+cd your-repo
+git branch nextjs
+```
 
 2. install project dependencies using npm:
 

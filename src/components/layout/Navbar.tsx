@@ -43,7 +43,7 @@ export default function Navbar() {
             </div>
           </div>
           {/* Blog link */}
-          <Link href="/home" className="hover:text-lime-700">
+          <Link href="/blog" className="hover:text-lime-700">
             Blog
           </Link>
           {/* About Us link */}
