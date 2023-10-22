@@ -14,7 +14,7 @@ Before you can run this project, ensure you have the following software installe
 ```bash
 git clone https://github.com/yourusername/your-repo.git
 cd your-repo
-git branch nextjs
+git checkout nextjs
 ```
 
 2. install project dependencies using npm:
