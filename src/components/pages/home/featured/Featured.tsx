@@ -2,6 +2,7 @@ import Img3 from "@/images/dreamway-tower.jpg";
 import Img2 from "@/images/popular-city-tower.jpg";
 import Img1 from "@/images/zamzam-tower.jpg";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Featured() {
   return (
@@ -10,12 +11,18 @@ export default function Featured() {
         <div className="mb-4 text-2xl font-bold lg:mb-0 lg:text-3xl">
           Our Featured Property
         </div>
-        <button className="lg:text-md rounded-3xl bg-lime-300 px-5 py-2 text-base font-medium text-gray-900 hover:bg-lime-500">
+        <Link
+          href="/ongoing-project"
+          className="lg:text-md mx-auto flex w-fit items-center justify-center rounded-3xl bg-lime-300 px-5 py-2 text-base font-medium text-gray-900 hover:bg-lime-500 md:mx-0"
+        >
           View All Project
-        </button>
+        </Link>
       </div>
       <div className="grid grid-cols-1 gap-8 md:grid-cols-2 md:grid-rows-2">
-        <div className=" relative col-span-1 row-span-2 w-full overflow-clip rounded-3xl md:h-[34rem] ">
+        <Link
+          href="/ongoing-project/zam-zam-tower"
+          className=" relative col-span-1 row-span-2 w-full overflow-clip rounded-3xl md:h-[34rem] "
+        >
           <div className="group h-full w-full">
             <Image
               src={Img1}
@@ -34,8 +41,11 @@ export default function Featured() {
               </button>
             </div>
           </div>
-        </div>
-        <div className=" relative col-span-1 row-span-1 h-[16rem] w-full overflow-clip rounded-3xl ">
+        </Link>
+        <Link
+          href="/ongoing-project/popular-city-plaza"
+          className=" relative col-span-1 row-span-1 h-[16rem] w-full overflow-clip rounded-3xl "
+        >
           <div className="group">
             <Image
               src={Img2}
@@ -51,8 +61,11 @@ export default function Featured() {
               </button>
             </div>
           </div>
-        </div>
-        <div className=" relative col-span-1 row-span-1 h-[16rem] w-full overflow-clip rounded-3xl ">
+        </Link>
+        <Link
+          href="/ongoing-project/dream-way-tower-02"
+          className=" relative col-span-1 row-span-1 h-[16rem] w-full overflow-clip rounded-3xl "
+        >
           <div className="group">
             <Image
               src={Img3}
@@ -68,7 +81,7 @@ export default function Featured() {
               </button>
             </div>
           </div>
-        </div>
+        </Link>
       </div>
     </div>
   );

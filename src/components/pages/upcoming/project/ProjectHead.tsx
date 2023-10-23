@@ -40,7 +40,7 @@ export default function ProjectHead({
               </p>
               <p>{district}</p>
             </div>
-            <div className="mb-2 flex justify-between">
+            <div className="mb-2 flex items-start justify-between text-right">
               <p className="flex items-center gap-2">
                 <BsCheck2Circle color="#84cc16" size="20" />
                 Type

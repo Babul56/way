@@ -1,5 +1,6 @@
 "use client";
 import Image, { StaticImageData } from "next/image";
+import Link from "next/link";
 import { SetStateAction, useState } from "react";
 import { BsCheck2Circle } from "react-icons/bs";
 import { MdLocationPin } from "react-icons/md";
@@ -37,7 +38,7 @@ export default function ProjectHead({
   };
 
   return (
-    <section className="bg-green-50 px-6 py-10 md:px-10 md:py-12 lg:px-44 lg:py-16">
+    <section className="bg-green-50 px-3 py-10 md:px-10 md:py-12 lg:px-44 lg:py-16">
       <div className="card grid grid-cols-4 grid-rows-4  gap-6">
         <div className="col-span-4 row-span-2 p-0 md:row-span-4 lg:col-span-2 lg:p-10 lg:pl-0 xl:col-span-2">
           <div>
@@ -52,7 +53,7 @@ export default function ProjectHead({
               </p>
               <p>{district}</p>
             </div>
-            <div className="mb-2 flex justify-between">
+            <div className="mb-2 flex items-start justify-between text-right">
               <p className="flex items-center gap-2">
                 <BsCheck2Circle color="#84cc16" size="20" />
                 Type
@@ -72,18 +73,18 @@ export default function ProjectHead({
             <p className="py-2 text-3xl font-bold text-lime-500">{price}</p>
           </div>
           <div className="mt-8">
-            <a
+            <Link
+              href="/"
               className="hidden rounded-3xl border border-solid border-white bg-lime-300 px-6 py-1.5 text-lg font-medium  text-black transition duration-200 lg:ml-auto lg:mr-3 lg:inline-block"
-              href="#"
             >
               Book Now
-            </a>
-            <a
+            </Link>
+            <Link
+              href="/contact-us"
               className="hidden rounded-3xl border border-black bg-none px-6 py-1.5 text-lg font-medium text-black transition duration-200 hover:bg-gray-700 hover:text-white lg:inline-block"
-              href="../contact.html"
             >
               Contact Us
-            </a>
+            </Link>
           </div>
         </div>
         <div className="col-span-4 row-span-2 md:row-span-4 lg:col-span-2 xl:col-span-2">
@@ -102,7 +103,7 @@ export default function ProjectHead({
                 loading="lazy"
               />
 
-              <div className="mt-4 flex h-[7rem] gap-4">
+              <div className="mt-4 flex h-[5rem] gap-4 md:h-[7rem]">
                 <Image
                   alt=""
                   src={pic1}

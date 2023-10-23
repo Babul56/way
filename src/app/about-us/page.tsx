@@ -1,3 +1,4 @@
+import SkeletonLoader from "@/components/common/SkeletonLoader";
 import CustomNav from "@/components/layout/CustomNav";
 import Map from "@/components/layout/Map";
 import Message from "@/components/pages/about-us/Message";
@@ -12,6 +13,7 @@ export default function AboutUs() {
       <Team />
       <Message />
       <Map />
+      <SkeletonLoader />
     </div>
   );
 }

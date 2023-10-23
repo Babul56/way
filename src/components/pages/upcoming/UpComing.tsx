@@ -42,9 +42,9 @@ export default function UpComing() {
                 </p>
                 <p>{data.district}</p>
               </div>
-              <div className="flex items-start justify-between">
-                <p className="flex items-center gap-1">
-                  <BsCheck2Circle color="#a4cd39" size={20} />
+              <div className="mb-2 flex items-start justify-between text-right">
+                <p className="flex items-center gap-2">
+                  <BsCheck2Circle color="#a4cd39" size="20" />
                   Type
                 </p>
                 <p>{data.type}</p>
