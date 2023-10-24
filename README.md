@@ -1,5 +1,7 @@
 # WayHousing
 
+[Live Project Demo](https://nextjs--stupendous-florentine-14b13d.netlify.app/)
+
 ## Prerequisites
 
 Before you can run this project, ensure you have the following software installed on your machine:
