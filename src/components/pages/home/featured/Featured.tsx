@@ -1,23 +1,39 @@
+"use client";
+import {
+  AnimateFromLeft,
+  AnimateFromRight,
+} from "@/components/animation/Variants";
 import Img3 from "@/images/dreamway-tower.jpg";
 import Img2 from "@/images/popular-city-tower.jpg";
 import Img1 from "@/images/zamzam-tower.jpg";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function Featured() {
   return (
     <div className="flex flex-col gap-8 px-3 py-20 md:px-10 md:py-12 lg:px-44 lg:py-16">
-      <div className="flex flex-col md:flex-row md:justify-between">
-        <div className="mb-4 text-2xl font-bold lg:mb-0 lg:text-3xl">
-          Our Featured Property
-        </div>
-        <Link
-          href="/ongoing-project"
-          className="lg:text-md mx-auto flex w-fit items-center justify-center rounded-3xl bg-lime-300 px-5 py-2 text-base font-medium text-gray-900 hover:bg-lime-500 md:mx-0"
+      <motion.div
+        initial="offscreen"
+        whileInView="onscreen"
+        viewport={{ amount: 0.6, once: false }}
+        className="flex flex-col md:flex-row md:justify-between"
+      >
+        <motion.div
+          variants={AnimateFromLeft}
+          className="mb-4 text-2xl font-bold lg:mb-0 lg:text-3xl"
         >
-          View All Project
-        </Link>
-      </div>
+          Our Featured Property
+        </motion.div>
+        <motion.div variants={AnimateFromRight}>
+          <Link
+            href="/ongoing-project"
+            className="lg:text-md mx-auto flex w-fit items-center justify-center rounded-3xl bg-lime-300 px-5 py-2 text-base font-medium text-gray-900 hover:bg-lime-500 md:mx-0"
+          >
+            View All Project
+          </Link>
+        </motion.div>
+      </motion.div>
       <div className="grid grid-cols-1 gap-8 md:grid-cols-2 md:grid-rows-2">
         <Link
           href="/ongoing-project/zam-zam-tower"

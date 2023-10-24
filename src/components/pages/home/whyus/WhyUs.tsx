@@ -1,19 +1,36 @@
+"use client";
+import {
+  AnimateFromLeft,
+  AnimateFromRight,
+} from "@/components/animation/Variants";
 import Other from "@/images/other-p.png";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function WhyUs() {
   return (
-    <section className="bg-white px-6 py-10 md:px-10 md:py-12 lg:px-44 lg:py-16">
+    <motion.section
+      initial="offscreen"
+      whileInView="onscreen"
+      viewport={{ amount: 0.4, once: false }}
+      className="bg-white px-6 py-10 md:px-10 md:py-12 lg:px-44 lg:py-16"
+    >
       <div className="card grid grid-cols-4  gap-6">
-        <div className="col-span-4 row-span-2 rounded-2xl md:row-span-4 lg:col-span-2 xl:col-span-2">
+        <motion.div
+          variants={AnimateFromLeft}
+          className="col-span-4 row-span-2 rounded-2xl md:row-span-4 lg:col-span-2 xl:col-span-2"
+        >
           <Image
             src={Other}
             alt=""
             className="h-[350px] w-full rounded-2xl object-cover lg:h-[450px]"
           />
-        </div>
-        <div className="col-span-4 row-span-2 md:row-span-4 lg:col-span-2 xl:col-span-2">
+        </motion.div>
+        <motion.div
+          variants={AnimateFromRight}
+          className="col-span-4 row-span-2 md:row-span-4 lg:col-span-2 xl:col-span-2"
+        >
           <div className="lg:pl-10">
             <h2 className="text-2xl font-bold">Why Choose Us?</h2>
             <div className="mt-6">
@@ -46,8 +63,8 @@ export default function WhyUs() {
               Contact Us
             </Link>
           </div>
-        </div>
+        </motion.div>
       </div>
-    </section>
+    </motion.section>
   );
 }

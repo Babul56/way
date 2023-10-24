@@ -1,8 +1,24 @@
+"use client";
+
+import {
+  AnimateFromLeft,
+  AnimateFromRight,
+} from "@/components/animation/Variants";
+import { motion } from "framer-motion";
+
 export default function AboutUs() {
   return (
-    <section className="mb-28 bg-white px-4 md:px-10 md:py-12 lg:px-44 lg:py-20">
-      <div className="card grid grid-cols-4  gap-10">
-        <div className=" order-2 col-span-4 rounded-2xl bg-gray-50 lg:order-1 lg:col-span-2 xl:col-span-2">
+    <motion.section
+      initial="offscreen"
+      whileInView="onscreen"
+      viewport={{ amount: 0.4, once: false }}
+      className="mb-28 bg-white px-4 md:px-10 md:py-12 lg:px-44 lg:py-20"
+    >
+      <div className="grid grid-cols-4  gap-10">
+        <motion.div
+          variants={AnimateFromLeft}
+          className=" order-2 col-span-4 rounded-2xl bg-gray-50 lg:order-1 lg:col-span-2 xl:col-span-2"
+        >
           <div className="mx-auto max-w-screen-md ">
             <form action="#" className="space-y-6">
               <div className="flex">
@@ -44,8 +60,11 @@ export default function AboutUs() {
               </div>
             </form>
           </div>
-        </div>
-        <div className="order-1 col-span-4  flex flex-col justify-center lg:order-2 lg:col-span-2 xl:col-span-2">
+        </motion.div>
+        <motion.div
+          variants={AnimateFromRight}
+          className="order-1 col-span-4  flex flex-col justify-center lg:order-2 lg:col-span-2 xl:col-span-2"
+        >
           <h2 className="mb-6 text-3xl font-bold">
             What to Know More Details About us?
           </h2>
@@ -62,8 +81,8 @@ export default function AboutUs() {
             ongoing projects of which some are completed and some are to be
             completed very soon.
           </p>
-        </div>
+        </motion.div>
       </div>
-    </section>
+    </motion.section>
   );
 }
