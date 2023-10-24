@@ -2,13 +2,19 @@ import CustomNav from "@/components/layout/CustomNav";
 import Map from "@/components/layout/Map";
 import OtherProperty from "@/components/pages/home/otherproperty/OtherProperty";
 import ProjectDetails from "@/components/pages/ongoing/project/ProjectDetails";
-import { useRouter } from "next/navigation";
+import { Metadata } from "next";
 
-interface PageProps {
+type Props = {
   params: { slug: string };
-}
-export default function Page({ params }: PageProps) {
-  const router = useRouter;
+};
+
+export const generateMetadata = ({ params }: Props): Metadata => {
+  const slug = params.slug.replace(/-/g, " ");
+  return {
+    title: `Wayhousing || ${slug}`,
+  };
+};
+export default function Page({ params }: Props) {
   return (
     <div>
       <CustomNav />

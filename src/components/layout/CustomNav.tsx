@@ -20,7 +20,7 @@ export default function CustomNav() {
   const pathname = usePathname();
   const parts = pathname.split("/");
   const lastPart = parts[parts.length - 1].replace(/-/g, " ");
-  console.log(lastPart);
+
   return (
     <div className="relative">
       <Image

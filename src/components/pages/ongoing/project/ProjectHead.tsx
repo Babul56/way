@@ -107,7 +107,7 @@ export default function ProjectHead({
                 <Image
                   alt=""
                   src={pic1}
-                  className={`h-full w-1/3 rounded-xl object-cover ${
+                  className={`h-full w-full rounded-xl object-cover ${
                     selectedImageIndex === 0 ? "opacity-100" : "opacity-70"
                   }`}
                   onClick={() => handleImageSelection(0)}
@@ -115,7 +115,7 @@ export default function ProjectHead({
                 <Image
                   alt=""
                   src={pic2}
-                  className={`h-full w-1/3 rounded-xl object-cover ${
+                  className={`h-full w-full rounded-xl object-cover ${
                     selectedImageIndex === 1 ? "opacity-100" : "opacity-70"
                   }`}
                   onClick={() => handleImageSelection(1)}
@@ -123,7 +123,7 @@ export default function ProjectHead({
                 <Image
                   alt=""
                   src={pic3}
-                  className={`h-full w-1/3 rounded-xl object-cover ${
+                  className={`h-full w-full rounded-xl object-cover ${
                     selectedImageIndex === 2 ? "opacity-100" : "opacity-70"
                   }`}
                   onClick={() => handleImageSelection(2)}

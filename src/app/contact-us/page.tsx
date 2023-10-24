@@ -1,5 +1,6 @@
 import CustomNav from "@/components/layout/CustomNav";
 import bg from "@/images/g-map.png";
+import { Metadata } from "next";
 import Image from "next/image";
 import {
   FaFacebookF,
@@ -8,6 +9,10 @@ import {
   FaTwitter,
   FaYoutube,
 } from "react-icons/fa";
+
+export const metadata: Metadata = {
+  title: "Wayhousing || Contact Us",
+};
 
 export default function ContactUs() {
   return (
