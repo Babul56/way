@@ -36,7 +36,7 @@ export default function Featured() {
               <p className="text-xl font-bold text-white">
                 Zam Zam Tower, Noakhali
               </p>
-              <button className="text-md mt-2 border border-lime-500 px-2 font-medium text-white hover:text-lime-500">
+              <button className="text-md my-2 rounded-full border border-lime-500 px-5 py-1 font-medium text-white hover:text-lime-500 group-hover:bg-lime-600">
                 View Details
               </button>
             </div>
@@ -56,7 +56,7 @@ export default function Featured() {
               <p className="text-xl font-bold text-white">
                 popular City Plaza, Ramgonj
               </p>
-              <button className="text-md mt-2 border border-lime-500 px-2 font-medium text-white hover:text-lime-500">
+              <button className="text-md my-2 rounded-full border border-lime-500 px-5 py-1 font-medium text-white hover:text-lime-500 group-hover:bg-lime-600">
                 View Details
               </button>
             </div>
@@ -76,7 +76,7 @@ export default function Featured() {
               <p className="text-xl font-bold text-white">
                 Dream Way Tower 02, Lakshmipur
               </p>
-              <button className="text-md mt-2 border border-lime-500 px-2 font-medium text-white hover:text-lime-500">
+              <button className="text-md my-2 rounded-full border border-lime-500 px-5 py-1 font-medium text-white hover:text-lime-500 group-hover:bg-lime-600">
                 View Details
               </button>
             </div>

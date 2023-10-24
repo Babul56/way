@@ -11,27 +11,21 @@ export default function Hero() {
   return (
     <section className="bg-gradient-to-t from-green-100 to-green-50 px-4 py-10 pt-32 md:px-10 md:pb-12 md:pt-40 lg:px-44 lg:pb-16">
       <div className="grid items-center gap-5 lg:grid-cols-2">
-        {/* Welcome and Title Section */}
-        <div className="order-2 mt-10 lg:order-1 lg:mt-0 xl:mt-0">
+        <div className="order-2 flex flex-col justify-center gap-10 lg:order-1 ">
           <span className="text-md flex w-fit items-center gap-2 rounded-3xl bg-lime-200 px-4 py-2 pr-6 font-light text-gray-900 md:text-xl ">
-            {/* Welcome message */}
             welcome to way housing
             <FaHandsClapping color="#f4a025" />
           </span>
-          <h2 className="hero-text mt-6 text-4xl font-bold leading-tight tracking-wide lg:text-5xl lg:leading-snug">
-            {/* Hero title */}
-            Your Dream Home
-            <br /> Just a Click Away
+          <h2 className="hero-text text-4xl font-bold leading-tight tracking-wide lg:text-5xl lg:leading-snug">
+            Your Dream Home Just a Click Away
           </h2>
-          <p className="mb-6 mt-6 text-sm md:text-xl">
-            {/* Subtitle */}
+          <p className=" md:text-xl">
             Find Your Dream Home Today – One Click, Endless Possibilities.
           </p>
           <Link
             href="/upcoming-project"
-            className="md:text-md mt-10 rounded-lg bg-lime-300 px-5 py-3 font-medium text-gray-900 hover:bg-lime-500 lg:text-lg"
+            className="md:text-md w-fit rounded-lg bg-lime-300 px-5 py-3 font-medium text-gray-900 hover:bg-lime-500 lg:text-lg"
           >
-            {/* CTA button */}
             Discover More
           </Link>
         </div>

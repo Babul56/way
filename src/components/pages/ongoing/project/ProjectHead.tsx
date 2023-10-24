@@ -91,7 +91,7 @@ export default function ProjectHead({
           <div className="flex-shrink-0">
             <div className="flex max-w-full flex-col">
               <Image
-                className="h-[23rem] w-full rounded-2xl object-cover"
+                className="h-[15rem] w-full rounded-2xl object-cover md:h-[23rem]"
                 src={
                   selectedImageIndex === 0
                     ? pic1
@@ -103,7 +103,7 @@ export default function ProjectHead({
                 loading="lazy"
               />
 
-              <div className="mt-4 flex h-[5rem] gap-4 md:h-[7rem]">
+              <div className="mt-4 flex h-[5rem] gap-2 overflow-clip md:h-[7rem] md:gap-4">
                 <Image
                   alt=""
                   src={pic1}

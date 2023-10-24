@@ -52,7 +52,7 @@ export default function Menu() {
           NavOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
-        <div className="z-50 flex w-9/12 flex-col gap-4 bg-white">
+        <div className="z-50 flex w-9/12 flex-col gap-4 overflow-y-scroll bg-white">
           {/* Header with logo and close button */}
           <div className="text-primary-200 dark:text-primary-100 flex items-center justify-between px-8 py-5">
             <Link href={"/"}>
@@ -98,7 +98,7 @@ export default function Menu() {
             {/* Contact Us button */}
             <Link
               href="/contact-us"
-              className="rounded-full px-6 py-2 ring-1 ring-black transition-all duration-300 hover:bg-white"
+              className="flex items-center justify-center rounded-full px-6 py-2 ring-1 ring-black transition-all duration-300 hover:bg-white"
             >
               Contact Us
             </Link>

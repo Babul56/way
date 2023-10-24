@@ -41,7 +41,7 @@ export default function WhyUs() {
             </div>
             <Link
               href="/contact"
-              className="md:text-md anim-hero-button mt-6 rounded-3xl bg-lime-300 px-5 py-2 font-medium text-gray-900 hover:bg-lime-500 lg:text-lg"
+              className="md:text-md anim-hero-button mt-6 rounded-3xl bg-lime-300 px-8 py-2 font-medium text-gray-900 hover:bg-lime-500 lg:text-lg"
             >
               Contact Us
             </Link>

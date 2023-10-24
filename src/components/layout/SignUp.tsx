@@ -41,7 +41,7 @@ export default function SignUp() {
       {isPopupOpen && (
         <div className="fixed left-0 top-0 h-full w-full bg-gray-900 bg-opacity-30 backdrop-blur-sm">
           {/* Popup */}
-          <div className="relative top-28 mx-auto flex h-fit w-fit flex-col items-center justify-center gap-4 rounded-lg bg-white p-4 shadow-md md:p-8">
+          <div className="relative top-28 mx-auto flex h-fit w-10/12 flex-col items-center justify-center gap-4 rounded-lg bg-white p-4 shadow-md md:p-8">
             <button
               onClick={closePopup}
               className="absolute -right-6 -top-6 flex h-10 w-10 items-center justify-center rounded-full bg-gray-800 font-bold text-white opacity-50 transition-all duration-300 hover:rotate-180"

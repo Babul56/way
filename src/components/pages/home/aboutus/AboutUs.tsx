@@ -1,7 +1,7 @@
 export default function AboutUs() {
   return (
     <section className="mb-28 bg-white px-4 md:px-10 md:py-12 lg:px-44 lg:py-20">
-      <div className="card grid grid-cols-4  gap-6">
+      <div className="card grid grid-cols-4  gap-10">
         <div className=" order-2 col-span-4 rounded-2xl bg-gray-50 lg:order-1 lg:col-span-2 xl:col-span-2">
           <div className="mx-auto max-w-screen-md ">
             <form action="#" className="space-y-6">
